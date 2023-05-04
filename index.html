@@ -13,17 +13,21 @@
         Calculadora de Pigmentação
     </h1>
 
-    <select id="select-quantidade">
-        <option value="18000">18 Litros</option>
-        <option value="15000">15 Litros</option>
-        <option value="3600">3.6 Litros</option>
-        <option value="900">900 ml</option>
-        <option value="100">100 ml</option>
-    </select>
+    <div>
+        <label for="select-quantidade">Quantidade de Tinta:</label>
+        <select id="select-quantidade">
+            <option value="18000">18 Litros</option>
+            <option value="15000">15 Litros</option>
+            <option value="3600">3.6 Litros</option>
+            <option value="900">900 ml</option>
+            <option value="100">100 ml</option>
+        </select>
+    </div>
 
-    <select id="select-cores">
-        
-    </select>
+    <div>
+        <label for="select-cores">Selecione a cor:</label>
+        <select id="select-cores"></select>
+    </div>
 
     <button onclick="calculate()">
         Calcular
