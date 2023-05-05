@@ -42,3 +42,9 @@ button {
     border: none;
     font-size: 1rem;
 }
+
+@media (max-width: 460px) {
+    h1 {
+        font-size: 130%;
+    }
+}
