@@ -20,13 +20,13 @@ function gerarResposta(tampinha, mlTinta) {
 }    
 
 function addHtml(cor, resposta) {
-    const modal = document.querySelector('.modal')
+    const container = document.querySelector('.modal .reposta-container')
     const div = document.createElement('div')
     div.innerHTML = `
         <p class="cor">${cor}</p>
         <p clas="ml">${resposta}ml</p>
     `
-    modal.appendChild(div)
+    container.appendChild(div)
 }
 
 function toggleModal() {
@@ -34,9 +34,15 @@ function toggleModal() {
     modalOverlay.classList.toggle('active')
 }
 
+function resetarContainer() {
+    let container = document.querySelector('.modal .reposta-container')
+    container.innerHTML = ''
+}
+
 
 function calcular() {
 
+    resetarContainer()
     toggleModal()
 
     const mlTinta = selecMlTinta.value
