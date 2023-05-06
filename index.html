@@ -29,14 +29,22 @@
         <select id="select-cores"></select>
     </div>
 
-    <button onclick="calculate()">
+    <button onclick="calcular()">
         Calcular
     </button>
 
-    <div class="resposta-container">
+    <div class="modal-overlay">
 
+        
+        <div class="modal">
+            <img src="./assets/close.svg" alt="close icon" onclick="toggleModal()">
+            
+            <h2>Pigmentação</h2>
+
+        </div>
     </div>
 
-    <script src="./main.js"></script>
+    <script src="./data.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

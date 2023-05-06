@@ -1,4 +1,4 @@
-const cores = [
+const Data = [
     {
         nome: 'Amarelo Limpo',
         corantes: [['Amarelo' , 12]]
@@ -143,36 +143,3 @@ const cores = [
         corantes: [["Preto" , 3], ["Ocre" , 1]]
     }
 ]
-
-
-let selectCores = document.querySelector('#select-cores')
-let selecMlTinta = document.querySelector('#select-quantidade')
-let respostaContainer = document.querySelector('.resposta-container')
-
-function init() {
-    for (const cor of cores) {
-        const option = document.createElement('option')
-        option.textContent = cor.nome
-        selectCores.appendChild(option)
-    }
-}
-
-function calculate() {
-    respostaContainer.innerHTML = ''
-
-    let mlTinta = selecMlTinta.value
-    Number(mlTinta)
-
-    let index = selectCores.selectedIndex
-    let cor = cores[index]
-
-    for (let corante of cor.corantes) {
-        let mlCorante = corante[1] * 4.1666
-        let resposta = (mlTinta * mlCorante) / 3600
-        let p = document.createElement('p')
-        p.textContent = `${corante[0]} -----> ${resposta.toFixed(4)}ml`
-        respostaContainer.appendChild(p)
-    }
-}
-
-init()
